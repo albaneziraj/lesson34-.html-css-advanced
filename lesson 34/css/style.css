@@ -1,14 +1,9 @@
-#name_error{
-    visibility: hidden;
-    color: red;
+#circle{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: red;
+    position: absolute;
+    display: none;
 }
 
-#age_error{
-    visibility: hidden;
-    color: red;
-}
-
-#city_error{
-    visibility: hidden;
-    color: red;
-}

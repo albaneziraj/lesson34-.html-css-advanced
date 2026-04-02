@@ -1,45 +1,24 @@
-function validation(){
-    var name = document.getElementById("name").value;
-    var valid_name_regex = /^[A-Za-z]+$/;
+// function printNames(){
+//     document.write("Emir");
+//     document.write("<Br>");
+//     setTimeout(function(){document.write("Etnik");}, 3000);
+//     document.write("Veron");
+// }
 
-    var age = document.getElementById("age").value;
-    var valid_age_regex = /^[0-9]+$/;
+// printNames();
 
-    var city = document.getElementById("city").value;
+var colors = ['red','green','blue','purple'];
 
-    if(!(name.match(valid_name_regex))|| !(age.match(valid_age_regex)) || (city == "")){
-        if(!(name.match(valid_name_regex))){
-            document.getElementById("name_error").style.visibility = "visible";
-            document.getElementById("name").style.borderColor = "red";
-            }else{
-                document.getElementById("name_error").style.visibility = "hidden";
-                document.getElementById("name").style.borderColor = "black";
-            }
-
-             if(!(age.match(valid_age_regex))){
-                document.getElementById("age_error").style.visibility = "visible";
-                document.getElementById("age").style.borderColor = "black";
-            }else{
-                document.getElementById("age_error").style.visibility = "hidden";
-                document.getElementById("age").style.borderColor = "black";
-            }
-
-            if(city == ""){
-                document.getElementById("city_error").style.visibility = "visible";
-                document.getElementById("city").style.borderColor = "red";
-            }else{
-            document.getElementById("city_error").style.visibility = "hidden";
-            document.getElementById("city").style.borderColor = "black";
-            }
-
-            return false;
-        }else{
-            document.getElementById("name_error").style.visibility = "hidden";
-            document.getElementById("name").style.borderColor = "black";
-            document.getElementById("age_error").style.visibility = "hidden";
-            document.getElementById("age").style.borderColor = "black";
-            document.getElementById("city_error").style.visibility = "hidden";
-            document.getElementById("city").style.borderColor = "black";
-            return true;
-        }
+function changeBgColor(){
+    document.querySelector('body').style.background =
+    colors[Math.floor(Math.random()*colors.length)];
 }
+
+var p = ["Alba","Veron","Etnik","Emir"];
+
+function changeNames(){
+    document.querySelector('body').innerHTML =
+    names[Math.floor(Math.random()*names.length)];
+}
+setInterval(changeBgColor, 1000);
+setInterval(changeNames, 1000);
